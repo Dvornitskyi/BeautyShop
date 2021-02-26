@@ -1,17 +1,20 @@
 <template>
   <div class="home">
-    <HelloWorld msg="tratata" />
+    <TheSliperTopProducts />
+    <TheSliperNewsProducts />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import TheSliperTopProducts from "../components/TheSliperTopProducts.vue";
+import TheSliperNewsProducts from "../components/TheSliperNewsProducts.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    TheSliperTopProducts,
+    TheSliperNewsProducts,
   },
 };
 </script>

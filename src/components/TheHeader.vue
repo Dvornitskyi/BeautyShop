@@ -1,23 +1,102 @@
 <template>
   <div class="header">
-    <img alt="Instagram" src="../assets/BeautyShopDomkaInstagram.jpg" />
-    <img alt="Vue logo" src="../assets/logo.jpg" />
-    <img alt="Vue logo" src="../assets/shopping-cart.png" />
+    <a href="https://www.instagram.com/beauty.shop_domka/">
+      <img
+        class="header__instagram"
+        alt="Instagram"
+        src="../assets/BeautyShopDomkaInstagram.jpg"
+      />
+    </a>
+    <router-link to="/">
+      <img
+        class="header__BeautyShop-logo"
+        alt="BeautyShop logo"
+        src="../assets/logo.jpg"
+      />
+    </router-link>
+
+    <div>
+      <router-link to="/TheBasket">
+        <img
+          class="header__shopping-cart"
+          alt="shopping cart"
+          src="../assets/shopping-cart.png"
+        />
+      </router-link>
+      <span class="fixed">Кількіть {{ count }}</span>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex";
 export default {
   name: "TheHeader",
+  computed: {
+    ...mapState(["count", "suma", "nameProduct"]),
+  },
+  methods: {
+    ...mapActions(["increment", "decrement", "reset", "sumaSum"]),
+  },
 };
 </script>
 
 <style scoped lang="scss">
+.fixed {
+  position: fixed;
+}
 .header {
   height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  &__instagram {
+    cursor: pointer;
+  }
+
+  &__instagram:hover {
+    opacity: 1;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+  }
+  @-webkit-keyframes flash {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes flash {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  &__BeautyShop-logo {
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: 3s linear;
+  }
+  &__BeautyShop-logo:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  &__shopping-cart {
+    cursor: pointer;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  &__shopping-cart:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
 }
 img {
   height: 100px;
