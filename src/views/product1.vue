@@ -64,8 +64,8 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-@media screen and (max-width: 1300px) {
+<style scoped lang="scss">
+@media screen and (max-width: 1280px) {
   .product {
     display: flex;
     flex-direction: column;

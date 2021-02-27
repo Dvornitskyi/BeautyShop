@@ -89,28 +89,37 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-// .product {
-//   display: flex;
-//   justify-content: space-around;
-//   padding: 20px;
-//   &__image {
-//     width: 300px;
-//     height: 300px;
-//   }
-//   &__text-button {
-//     width: 300px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//   }
-//   &__button {
-//     margin-top: 20px;
-//     width: 100%;
-//     height: 30px;
-//     background-color: purple;
-//     color: white;
-//   }
-// }
-//
+<style scoped lang="scss">
+@media screen and (max-width: 1280px) {
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.product {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  &__image {
+    width: 300px;
+    height: 300px;
+  }
+  &__text-button {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__button {
+    margin-top: 20px;
+    width: 100%;
+    height: 30px;
+    background-color: purple;
+    color: white;
+  }
+  &__button:hover {
+    background-color: green;
+  }
+}
 </style>

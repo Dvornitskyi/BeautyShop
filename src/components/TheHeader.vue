@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1280px) {
   .header {
     &__instagram {
       display: none;
@@ -53,15 +53,15 @@ export default {
     &__shopping-cart {
       position: absolute;
       top: -30px;
-      right: -30px;
+      right: 0px;
       z-index: 999;
     }
   }
 }
 .mobile {
   position: absolute;
-  top: -15px;
-  right: -15px;
+  top: -20px;
+  right: 45px;
   color: purple;
   z-index: 4;
 }

@@ -23,7 +23,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 html {
   padding: 20px;
 }
@@ -36,7 +37,7 @@ textarea,
 div,
 input {
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
 }
 ul {

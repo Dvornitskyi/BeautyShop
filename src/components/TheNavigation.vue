@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1280px) {
   .nav {
     position: absolute;
     z-index: 300;
@@ -95,13 +95,14 @@ ul {
   justify-content: space-around;
   align-items: center;
 }
-li {
+a {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 600;
 }
 //#app
 li:hover {

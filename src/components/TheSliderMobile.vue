@@ -274,7 +274,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-@media screen and (min-width: 1365px) {
+@media screen and (min-width: 1279px) {
   .slidertop {
     display: none;
   }

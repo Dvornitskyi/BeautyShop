@@ -17,7 +17,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1280px) {
 }
 
 img {
