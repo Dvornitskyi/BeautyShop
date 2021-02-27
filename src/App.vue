@@ -39,6 +39,7 @@ input {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 16px;
+  color: #2c3e50;
 }
 ul {
   list-style-type: none;

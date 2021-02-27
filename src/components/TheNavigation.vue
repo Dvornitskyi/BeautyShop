@@ -101,9 +101,11 @@ a {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+
   font-size: 16px;
   font-weight: 600;
 }
+
 //#app
 li:hover {
   color: purple;
@@ -127,5 +129,8 @@ li:hover {
   li:hover {
     color: purple;
   }
+}
+a:active {
+  color: #42b983;
 }
 </style>

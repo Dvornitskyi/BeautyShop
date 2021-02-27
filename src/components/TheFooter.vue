@@ -3,7 +3,7 @@
     <div class="footer__top">
       <router-link to="/TheDelivery">Про доставку</router-link>
       <router-link to="/ThePay">Спосіб оплати</router-link>
-      <router-link to="/TheProducts">Про продукцию</router-link>
+      <router-link to="/TheProducts">Про продукцію</router-link>
     </div>
     <a
       class="footer__instagram"
@@ -23,6 +23,12 @@ export default {
 <style scoped lang="scss">
 @media screen and (max-width: 1280px) {
   .footer {
+    // position: relative;
+    // bottom: 0;
+    // overflow: auto;
+    // margin: auto;
+    // left: 0;
+    // right: 0;
     &__top {
       display: flex;
       flex-direction: column;
