@@ -1,10 +1,5 @@
 <template>
   <div id="TheFace">
-    <router-link to="/TheFace" class="TheMakeup__title">
-      <!-- <p>
-        Обличчя
-      </p> -->
-    </router-link>
     <div class="TheMakeup">
       <div class="TheMakeup__product">
         <router-link to="/product1">
@@ -148,6 +143,20 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@media screen and (max-width: 1300px) {
+  .TheMakeup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #TheFace {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .TheMakeup {
   display: flex;
 

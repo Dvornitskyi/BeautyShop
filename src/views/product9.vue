@@ -62,26 +62,26 @@ export default {
 </script>
 
 <style lang="scss">
-.product {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  &__image {
-    width: 400px;
-    height: 400px;
-  }
-  &__text-button {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  &__button {
-    margin-top: 20px;
-    width: 100%;
-    height: 30px;
-    background-color: purple;
-    color: white;
-  }
-}
+// .product {
+//   display: flex;
+//   justify-content: space-around;
+//   padding: 20px;
+//   &__image {
+//     width: 400px;
+//     height: 400px;
+//   }
+//   &__text-button {
+//     width: 400px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+//   &__button {
+//     margin-top: 20px;
+//     width: 100%;
+//     height: 30px;
+//     background-color: purple;
+//     color: white;
+//   }
+// }
 </style>

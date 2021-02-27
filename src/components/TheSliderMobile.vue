@@ -1,11 +1,10 @@
 <template>
   <div class="slidertop">
     <div id="app">
-      <p class="slidertop__title">Новинки</p>
       <vue-glide
         class="slidertop__slider"
         type="carousel"
-        :perView="4"
+        :perView="2"
         :autoplay="2000"
       >
         <vue-glide-slide class="slidertop__slid">
@@ -275,12 +274,13 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-@media screen and (max-width: 1300px) {
+@media screen and (min-width: 1365px) {
   .slidertop {
     display: none;
   }
 }
 .slidertop {
+  margin-top: 30px;
   &__title {
     display: flex;
     justify-content: center;
@@ -311,8 +311,8 @@ export default {
   }
 }
 img {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   overflow: hidden;
 }
 </style>

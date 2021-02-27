@@ -1,11 +1,7 @@
 <template>
   <div id="TheProducts">
     <div class="TheProducts">
-      <router-link to="/TheProducts" class="TheProducts__title">
-        <!-- <p>
-          Для чоловіків
-        </p> -->
-      </router-link>
+      <router-link to="/TheProducts" class="TheProducts__title" />
       <img src="../assets/TheProducts.jpg" alt="TheProducts" />
       <p class="TheProducts__text">Вся продукція була перевірена на собі</p>
     </div>
@@ -17,10 +13,12 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@media screen and (max-width: 1300px) {
+}
 img {
   margin: 0 auto;
-  width: 600px;
-  height: 400px;
+  width: 70%;
+  height: 70%;
   overflow: hidden;
 }
 .TheProducts {

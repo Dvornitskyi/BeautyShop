@@ -65,16 +65,23 @@ export default {
 };
 </script>
 <style lang="scss">
+@media screen and (max-width: 1300px) {
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .product {
   display: flex;
   justify-content: space-around;
   padding: 20px;
   &__image {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
   }
   &__text-button {
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,6 +92,9 @@ export default {
     height: 30px;
     background-color: purple;
     color: white;
+  }
+  &__button:hover {
+    background-color: green;
   }
 }
 </style>

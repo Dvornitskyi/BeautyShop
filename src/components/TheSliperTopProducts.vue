@@ -275,6 +275,11 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@media screen and (max-width: 1300px) {
+  .slidertop {
+    display: none;
+  }
+}
 .slidertop {
   width: 100%;
   &__title {

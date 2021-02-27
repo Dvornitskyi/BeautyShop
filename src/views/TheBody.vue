@@ -76,6 +76,14 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@media screen and (max-width: 1300px) {
+  .TheMakeup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .TheMakeup {
   display: flex;
 

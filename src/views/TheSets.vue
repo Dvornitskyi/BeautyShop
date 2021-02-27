@@ -147,6 +147,22 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@media screen and (max-width: 1300px) {
+  .TheMakeup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+  }
+  &__product {
+    width: 160px;
+  }
+}
 .TheMakeup {
   display: flex;
 

@@ -1,20 +1,34 @@
 <template>
-  <div id="nav" class="nav">
-    <router-link to="/">
-      <img class="nav__logo" alt="Vue logo" src="../assets/logo.png" />
-    </router-link>
-    <!-- <ul class="nav__TheMakeup">
+  <div id="nav mobile-none" class="nav">
+    <ul>
+      <li>
+        <router-link to="/" class="mobile-none">
+          <img class="nav__logo " alt="Vue logo" src="../assets/logo.png" />
+        </router-link>
+      </li>
+      <!-- <ul class="nav__TheMakeup">
       <li class="nav__active"> -->
-    <router-link to="/TheMakeup">Макіяж</router-link>
-    <!-- </li>
+      <li>
+        <router-link to="/TheMakeup" class="mobile-none">Макіяж</router-link>
+      </li>
+      <!-- </li>
       <li class="not-active">2</li>
       <li class="not-active">3</li>
     </ul> -->
-    <router-link to="/TheHair">Волосся</router-link>
-    <router-link to="/TheFace">Обличчя</router-link>
-    <router-link to="/TheBody">Тіло</router-link>
-    <router-link to="/TheMen">Чоловікам</router-link>
-    <router-link to="/TheSets">Набори</router-link>
+      <li>
+        <router-link to="/TheHair" class="mobile-none">Волосся</router-link>
+      </li>
+      <li>
+        <router-link to="/TheFace" class="mobile-none">Обличчя</router-link>
+      </li>
+      <li><router-link to="/TheBody" class="mobile-none">Тіло</router-link></li>
+      <li>
+        <router-link to="/TheSets" class="mobile-none">Набори</router-link>
+      </li>
+      <li>
+        <router-link to="/TheMen" class="mobile-none">Чоловікам</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -25,6 +39,42 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@media screen and (max-width: 1300px) {
+  .nav {
+    position: absolute;
+    z-index: 300;
+    top: 0;
+    width: 90px;
+    overflow: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    // display: none;
+  }
+  li {
+    // display: none;
+    visibility: hidden;
+  }
+  li:first-child {
+    visibility: visible;
+    // display: block;
+  }
+  ul:hover li {
+    visibility: visible;
+    // display: block;
+    // animation-duration: 2s;
+    // transition: 5s linear;
+    animation-delay: 3s;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}
 .nav {
   &__logo:hover {
     border-radius: 50%;
@@ -35,30 +85,26 @@ img {
   height: 50px;
   width: 50px;
 }
-// li {
-//   // display: none;
-//   visibility: hidden;
-// }
-// li:first-child {
-//   visibility: visible;
-// }
-// ul:hover li {
-//   visibility: visible;
-//   // animation-duration: 2s;
-//   // transition: 5s linear;
-//   animation-delay: 3s;
-// }
+
 p {
   font-family: "Montserrat", sans-serif;
 }
-#app {
+//#app
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+li {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-weight: 800;
 }
-#app:hover {
+//#app
+li:hover {
   color: purple;
 }
 #nav {
@@ -72,15 +118,12 @@ p {
   #nav:hover {
     border-bottom: 2px solid purple;
   }
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
+  li {
+    &a.router-link-exact-active {
       color: #42b983;
     }
   }
-  a:hover {
+  li:hover {
     color: purple;
   }
 }

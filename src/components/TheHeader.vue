@@ -23,7 +23,7 @@
           src="../assets/shopping-cart.png"
         />
       </router-link>
-      <span class="fixed">Кількіть {{ count }}</span>
+      <span class="mobile">{{ count }}</span>
     </div>
   </div>
 </template>
@@ -42,13 +42,34 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.fixed {
-  position: fixed;
+@media screen and (max-width: 1300px) {
+  .header {
+    &__instagram {
+      display: none;
+    }
+    &__BeautyShop-logo {
+      display: none;
+    }
+    &__shopping-cart {
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      z-index: 999;
+    }
+  }
+}
+.mobile {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  color: purple;
+  z-index: 4;
 }
 .header {
+  position: relative;
   height: 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   &__instagram {
     cursor: pointer;

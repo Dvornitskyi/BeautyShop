@@ -7,7 +7,12 @@
       <p>Кількіть {{ count }}, Ціна {{ suma }}</p>
       <p>Назва {{ nameProduct }}</p>
     </div>
-    <form action="#" class="TheBasket__form">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      class="TheBasket__form"
+    >
       <input type="text" name="name" placeholder="Прізвище Імя" required />
       <input type="email" name="email" placeholder="E-Mail" />
       <input type="tel" name="phone" placeholder="Номер телефону" />
@@ -17,6 +22,12 @@
 </template>
 
 <script>
+// const response = await fetch(
+//   `https://s2.apix-drive.com/web-hooks/16368/gq72og1o={{count}}&email=${suma}&text${nameProduct}`,
+//   {
+//     method: "GET",
+//   }
+// );
 import { mapState, mapActions } from "vuex";
 export default {
   name: "TheBasket",
@@ -54,12 +65,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@media screen and (max-width: 1300px) {
+  .TheBasket {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__data {
+      margin-bottom: 99px;
+    }
+  }
+}
 .TheBasket {
   display: flex;
-  padding: 20px;
+  padding: 0;
   justify-content: space-around;
   &__data {
-    width: 400px;
+    width: 298px;
   }
   input {
     margin-bottom: 20px;
@@ -74,7 +96,7 @@ export default {
     transition: 0.2s linear;
   }
   &__form {
-    width: 400px;
+    width: 298px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

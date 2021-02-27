@@ -17,10 +17,12 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@media screen and (max-width: 1300px) {
+}
 img {
   margin: 0 auto;
-  width: 600px;
-  height: 400px;
+  width: 70%;
+  height: 70%;
   overflow: hidden;
 }
 .ThePay {
