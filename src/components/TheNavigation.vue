@@ -3,7 +3,11 @@
     <ul>
       <li>
         <router-link to="/" class="mobile-none">
-          <img class="nav__logo " alt="Vue logo" src="../assets/logo.png" />
+          <img
+            class="nav__logo "
+            alt="Vue logo mobile-none"
+            src="../assets/logo.png"
+          />
         </router-link>
       </li>
       <!-- <ul class="nav__TheMakeup">
@@ -40,40 +44,43 @@ export default {
 
 <style scoped lang="scss">
 @media screen and (max-width: 1280px) {
-  .nav {
-    position: absolute;
-    z-index: 300;
-    top: 0;
-    width: 90px;
-    overflow: auto;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    // display: none;
+  .mobile-none {
+    display: none;
   }
-  li {
-    // display: none;
-    visibility: hidden;
-  }
-  li:first-child {
-    visibility: visible;
-    // display: block;
-  }
-  ul:hover li {
-    visibility: visible;
-    // display: block;
-    // animation-duration: 2s;
-    // transition: 5s linear;
-    animation-delay: 3s;
-  }
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
+  // .nav {
+  //   position: absolute;
+  //   z-index: 300;
+  //   top: 0;
+  //   width: 90px;
+  //   overflow: auto;
+  //   margin: auto;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   // display: none;
+  // }
+  // li {
+  //   // display: none;
+  //   visibility: hidden;
+  // }
+  // li:first-child {
+  //   visibility: visible;
+  //   // display: block;
+  // }
+  // ul:hover li {
+  //   visibility: visible;
+  //   // display: block;
+  //   // animation-duration: 2s;
+  //   // transition: 5s linear;
+  //   animation-delay: 3s;
+  // }
+  // ul {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  //   padding: 0;
+  // }
 }
 .nav {
   &__logo:hover {

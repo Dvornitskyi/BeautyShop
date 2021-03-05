@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <TheHeader />
+    <TheBurgerMenu />
     <TheNavigation />
     <router-view />
     <TheFooter />
@@ -9,6 +10,7 @@
 
 <script>
 import TheHeader from "@/components/TheHeader.vue";
+import TheBurgerMenu from "@/components/TheBurgerMenu";
 import TheNavigation from "@/components/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
 
@@ -18,6 +20,7 @@ export default {
     TheHeader,
     TheNavigation,
     TheFooter,
+    TheBurgerMenu,
   },
 };
 </script>

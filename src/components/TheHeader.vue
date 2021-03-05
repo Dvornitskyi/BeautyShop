@@ -1,15 +1,15 @@
 <template>
-  <div class="header">
+  <div class="header mobile-none">
     <a href="https://www.instagram.com/beauty.shop_domka/">
       <img
-        class="header__instagram"
+        class="header__instagram mobile-none"
         alt="Instagram"
         src="../assets/BeautyShopDomkaInstagram.jpg"
       />
     </a>
     <router-link to="/">
       <img
-        class="header__BeautyShop-logo"
+        class="header__BeautyShop-logo mobile-none"
         alt="BeautyShop logo"
         src="../assets/logo.jpg"
       />
@@ -18,12 +18,12 @@
     <div>
       <router-link to="/TheBasket">
         <img
-          class="header__shopping-cart"
+          class="header__shopping-cart mobile-none"
           alt="shopping cart"
           src="../assets/shopping-cart.png"
         />
       </router-link>
-      <span class="mobile">{{ count }}</span>
+      <span class="mobile mobile-none">{{ count }}</span>
     </div>
   </div>
 </template>
@@ -43,18 +43,25 @@ export default {
 
 <style scoped lang="scss">
 @media screen and (max-width: 1280px) {
+  .mobile {
+    display: none;
+  }
   .header {
+    display: none;
     &__instagram {
       display: none;
     }
     &__BeautyShop-logo {
       display: none;
     }
+    // &__shopping-cart {
+    //   position: absolute;
+    //   top: -30px;
+    //   right: 0px;
+    //   z-index: 999;
+    // }
     &__shopping-cart {
-      position: absolute;
-      top: -30px;
-      right: 0px;
-      z-index: 999;
+      display: none;
     }
   }
 }
